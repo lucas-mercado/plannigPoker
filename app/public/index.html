@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>PlanningPoker</title>
+</head>
+<body >
+    <header class="center" style="margin-bottom: 10px;"><h1 style="font-size: xxx-large;">Planning Poker</h1></header>
+    <div class="container">
+        <div class="columns is-multiline is-vcentered is-centered">
+            <div class="column is-3" style="border-right: 2px solid black;">
+                <div class="columns is-multiline is-vcentered is-centered">
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('1/2')">1/2</button>
+                    </div>
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('1')">1</button>
+                    </div>
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('2')">2</button>
+                    </div>
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('3')">3</button>                
+                    </div>
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('5')">5</button>
+                    </div>
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('8')">8</button>
+                    </div>
+                    <div class=" column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('13')">13</button>
+                    </div>
+                    <div class="column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('18')">18</button>
+                    </div>
+                    <div class="column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('20')">20</button>
+                    </div>
+                    <div class="column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('?')">?</button>
+                    </div>
+                    <div class="column is-narrow">
+                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('cafe')">cafe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <button id="cart" class="cart" style="--width: 75px; --height: 100px;"></button>
+            </div>
+            <div class="column is-3">
+                <ol>
+                    <li>persona 1</li>
+                </ol>
+            </div>
+        </div
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
