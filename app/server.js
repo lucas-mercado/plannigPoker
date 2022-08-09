@@ -20,6 +20,7 @@ const io = require("socket.io")(httpServer, options);
 const port = 3000
 
 io.on("connection", socket => console.log('connected!!!'));
+io.on("")
 
 //start server
 httpServer.listen(port,()=>console.log('Start Server !!!'));

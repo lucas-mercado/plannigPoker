@@ -16,9 +16,8 @@ main {
 }
 
 header {
-    border-bottom: 2px solid black;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,121,9,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(25,116,47);
+    background: linear-gradient(0deg, rgba(25,116,47,1) 42%, rgba(103,191,24,1) 100%);
 }
 
 .center {
@@ -26,4 +25,14 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.color-background-left {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(46,89,18,1) 100%);
+}
+
+.color-background-rigth {
+    background: rgb(46,89,18,1);
+    background: linear-gradient(0deg, rgba(22,121,9,1) 39%, rgba(34,193,195,1) 100%);
 }

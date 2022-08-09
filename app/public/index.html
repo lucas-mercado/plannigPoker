@@ -10,56 +10,56 @@
     <title>PlanningPoker</title>
 </head>
 <body >
-    <header class="center" style="margin-bottom: 10px;"><h1 style="font-size: xxx-large;">Planning Poker</h1></header>
-    <div class="container">
-        <div class="columns is-multiline is-vcentered is-centered">
-            <div class="column is-3" style="border-right: 2px solid black;">
-                <div class="columns is-multiline is-vcentered is-centered">
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('1/2')">1/2</button>
-                    </div>
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('1')">1</button>
-                    </div>
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('2')">2</button>
-                    </div>
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('3')">3</button>                
-                    </div>
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('5')">5</button>
-                    </div>
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('8')">8</button>
-                    </div>
-                    <div class=" column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('13')">13</button>
-                    </div>
-                    <div class="column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('18')">18</button>
-                    </div>
-                    <div class="column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('20')">20</button>
-                    </div>
-                    <div class="column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('?')">?</button>
-                    </div>
-                    <div class="column is-narrow">
-                        <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('cafe')">cafe</button>
-                    </div>
+    <header class="center"><h1 style="font-size: xxx-large;">Planning Poker</h1></header>
+    <div style="height: 90vh; display: flex;">
+        <!-- caja de cartas -->
+        <div  id="carts" class="color-background-left" style="height: 90vh; width: 20%; display: flex; flex-direction: column; justify-content: center;">
+            <div class="center">
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('1/2')">1/2</button>
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('1')">1</button>
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('2')">2</button>
+
+            </div>
+            <div class="center">
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('3')">3</button>                
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('5')">5</button>
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('8')">8</button>
+
+            </div>
+            <div class="center">
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('13')">13</button>
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('18')">18</button>
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('20')">20</button> 
+            </div>
+            <div class="center">
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('?')">?</button>
+                <button class="cart center" style="--width: 50px; --height: 75px" onclick="selected('cafe')">cafe</button>
+            </div>
+        </div>
+        <!-- caja de cartas -->
+        <div class="color-background-left" style="display: flex; height: 90vh; width: 60%; flex-direction: column; justify-content: center; align-items: center;">
+            <button id="cart" class="cart" style="--width: 150px; --height: 175px;"></button>
+            <p id='promedio' style="margin: 10px;">Promedio:</p>
+            <div style="display: flex">
+                <button style="margin-right: 5px;">revelar</button>
+                <button>clear</button>
+            </div>
+        </div>
+        <div class="color-background-left"style="display: flex ; height: 90vh; width: 20%; justify-content: center; align-items: center; flex-direction: column;">
+            <div style="display: flex; flex-direction: column;">
+                <label>username: </label>
+                <input type="text">
+                <div style="display: flex; justify-content: center; margin: 10px;">
+                    <button>join</button>
+                    <button>leave</button>
                 </div>
             </div>
-            <div class="column is-6">
-                <button id="cart" class="cart" style="--width: 75px; --height: 100px;"></button>
-            </div>
-            <div class="column is-3">
-                <ol>
-                    <li>persona 1</li>
-                </ol>
-            </div>
-        </div
+            <ol style="margin-top: 15px;">
+                <li>persona 1</li>
+            </ol>
+        </div>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
 </body>
 </html>
