@@ -38,20 +38,20 @@
         </div>
         <!-- caja de cartas -->
         <div class="color-background-left" style="display: flex; height: 90vh; width: 60%; flex-direction: column; justify-content: center; align-items: center;">
-            <button id="cart" class="cart" style="--width: 150px; --height: 175px;"></button>
+            <button id="cart" class="cart" style="--width: 125px; --height: 175px; font-size: 20px;"></button>
             <p id='promedio' style="margin: 10px;">Promedio:</p>
             <div style="display: flex">
-                <button style="margin-right: 5px;">revelar</button>
-                <button>clear</button>
+                <button id="calcular" onclick="calcular()"style="margin-right: 5px;">calcular</button>
+                <button id="remove" onclick="remove()">remove</button>
             </div>
         </div>
         <div class="color-background-left"style="display: flex ; height: 90vh; width: 20%; justify-content: center; align-items: center; flex-direction: column;">
             <div style="display: flex; flex-direction: column;">
                 <label>username: </label>
-                <input type="text">
+                <input id="username" type="text">
                 <div style="display: flex; justify-content: center; margin: 10px;">
-                    <button>join</button>
-                    <button>leave</button>
+                    <button id="join" onclick="join()">join</button>
+                    <button id="leave" onclick="leave()">leave</button>
                 </div>
             </div>
             <ol style="margin-top: 15px;">

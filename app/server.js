@@ -19,8 +19,18 @@ const options = {};
 const io = require("socket.io")(httpServer, options);
 const port = 3000
 
-io.on("connection", socket => console.log('connected!!!'));
-io.on("")
+//conection
+io.on("connection", socket => {
+    //join
+    socket.on('join', (username)=>{
+        io.emit('join', username);
+    })
+    //selected value
+    socket.on('selected', (value)=>{
+        io.emit('push', value);
+    })
+});
+
 
 //start server
 httpServer.listen(port,()=>console.log('Start Server !!!'));
